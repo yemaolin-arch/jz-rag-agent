@@ -162,10 +162,8 @@ cp .env.example .env
 # LLM 配置（MiniMax 示例）
 MINIMAX_API_KEY=your_api_key_here
 MINIMAX_BASE_URL=https://api.minimax.chat/v1
-MINIMAX_MODEL_NAME=abab6.5s-chat
+MINIMAX_MODEL_NAME=MiniMax-M2.7
 
-# 可选：HuggingFace Token（加速模型下载）
-HF_TOKEN=optional_token_here
 ```
 
 ### 3.4 运行命令
