@@ -1,0 +1,71 @@
+# 项目配置文件
+
+# 路径配置
+paths:
+  data_dir: "./data"
+  raw_dir: "./data/raw"
+  parsed_dir: "./data/parsed"
+  chunks_dir: "./data/chunks"
+  vector_store_dir: "./data/vector_store"
+
+# PDF 解析配置
+pdf:
+  classify_enabled: true
+  force_ocr_for_scanned: true
+  cache_enabled: true
+
+# 检索配置
+retrieval:
+  top_k: 10
+  bm25_weight: 0.3
+  dense_weight: 0.7
+  min_score: 0.3
+
+# Rerank 配置
+rerank:
+  top_k: 5
+  model: "BAAI/bge-reranker-base"
+  batch_size: 32
+
+# SelfCheck 配置
+selfcheck:
+  threshold: 0.7
+  max_retries: 2
+
+# Generation 配置
+generation:
+  temperature: 0.1
+  max_tokens: 2048
+  timeout: 60
+
+# OCR 配置
+ocr:
+  use_angle_cls: true
+  lang: "ch"
+  use_gpu: false
+  engine: "rapidocr"  # rapidocr or paddleocr
+
+# Table 表格配置
+table:
+  min_cols: 2
+  min_rows: 2
+  col_threshold: 100.0
+  row_threshold: 50.0
+  x_cluster_tolerance: 20.0
+
+# Chunk 分块配置
+chunking:
+  max_chunk_size: 512
+  overlap_size: 50
+  table_as_chunk: true
+
+# Embedding 配置
+embedding:
+  model: "BAAI/bge-m3"
+  device: "cpu"
+  batch_size: 32
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

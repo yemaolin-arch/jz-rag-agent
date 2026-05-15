@@ -1,0 +1,10 @@
+{
+  "pdf_count": 1,
+  "total_chunks": 25,
+  "table_chunks": 0,
+  "text_chunks": 25,
+  "parse_time": 38.54557776451111,
+  "vector_index_time": 98.32842493057251,
+  "hybrid_index_time": 81.99215626716614,
+  "total_time": 218.88121962547302
+}

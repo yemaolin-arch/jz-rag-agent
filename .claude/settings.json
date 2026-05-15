@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install*)",
+      "Bash(pip list*)",
+      "Bash(pip show*)",
+      "Bash(python*)",
+      "Bash(pytest*)",
+      "Bash(uvicorn*)",
+      "Bash(ls*)",
+      "Bash(cat*)",
+      "Bash(head*)",
+      "Bash(tail*)",
+      "Bash(find*)",
+      "Bash(grep*)",
+      "Bash(wc*)",
+      "Bash(mkdir*)",
+      "Bash(touch*)",
+      "Bash(cp*)",
+      "Bash(mv*)",
+      "Bash(git*)",
+      "Bash(tree*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(rm -rf ~)",
+      "Bash(rm -rf *)"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+[project]
+name = "jz-rag-agent"
+version = "0.1.0"
+description = "企业级 Agent/RAG 文档问答系统"
+requires-python = ">=3.10"
+dependencies = [
+    # FastAPI
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.27.0",
+
+    # LlamaIndex
+    "llama-index>=0.10.0",
+    "llama-index-llms-openai-like>=0.1.0",
+
+    # OCR
+    "paddleocr>=2.8.0",
+    "paddlepaddle>=2.6.0",
+    "pdf2image>=1.17.0",
+    "beautifulsoup4>=4.12.0",
+    "onnxruntime>=1.15.0,<1.18.0",
+
+    # PDF Parser
+    "pymupdf>=1.24.0",
+    "pymupdf4llm>=0.1.0",
+    "pdfplumber>=0.11.0",
+    "rapidocr-onnxruntime>=1.3.0",
+
+    # Vector Store & Embedding
+    "faiss-cpu>=1.8.0",
+    "sentence-transformers>=2.5.0",
+    "huggingface-hub>=0.20.0",
+    "transformers>=4.36.0",
+
+    # Retrieval
+    "rank-bm25>=0.2.2",
+
+    # LLM
+    "openai>=1.12.0",
+
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "pyyaml>=6.0.1",
+    "numpy>=1.26.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "httpx>=0.27.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "configs*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_ignores = true
