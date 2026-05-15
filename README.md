@@ -134,19 +134,16 @@ jz-rag-agent/
 ### 3.2 安装步骤
 
 ```bash
-# 1. 克隆项目
-cd jz-rag-agent
+# 1. 创建虚拟环境
+uv venv
 
-# 2. 创建虚拟环境
-uv venv .venv
-
-# 3. 激活虚拟环境
+# 2. 激活虚拟环境
 # Windows:
 .venv\Scripts\activate
 # Linux/Mac:
 source .venv/bin/activate
 
-# 4. 安装依赖
+# 3. 安装依赖
 uv pip install -e .
 ```
 
